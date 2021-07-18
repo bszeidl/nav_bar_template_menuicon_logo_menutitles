@@ -1,0 +1,106 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*variables*/
+:root {
+    --main-dark-color: rgba(0, 150, 190, 1);
+    --main-light-color: rgba(230, 240, 100, 1);
+}
+
+/*Menu icon*/
+
+.menu-cont {
+    /*position: absolute;
+    top: 20px;
+    right: 20px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--main-dark-color);
+    background-color: var(--main-light-color);
+    border-radius: 50px;
+} 
+
+.menu-line1 {		
+        
+    width: 25px;
+    height: 3px;
+    background-color: var(--main-dark-color);
+    margin: 2px 0;
+    border-radius: 5px;
+}
+
+   
+/*menu icon hover*/
+.menu-cont:hover {
+    background-color: var(--main-light-color);
+    transform: scale(1.3);			
+}
+
+/*page grid system for mobile devices*/
+
+ 
+ .menu-cont {
+    grid-area: menu-cont;
+    justify-self: center;
+    align-self: center;    
+ }
+
+ .logo-container {
+     grid-area: logo-container;
+     border: 1px solid black;
+     justify-self: center;
+     align-self: center; 
+ }
+
+ .menu-benefit {
+     grid-area: menu-benefit;
+ }
+
+ .menu-specification {
+     grid-area: menu-specification;
+ }
+
+ .menu-workout {
+     grid-area: menu-workout;
+ }
+
+ .menu-contact {
+     grid-area: menu-contact;
+ }
+
+ .menu-logo-line {
+     grid-area: menu-logo-line;
+    display: grid;
+    grid-template-columns: 70px 3fr;
+    grid-template-rows: 70px;
+    grid-template-areas:     
+    "menu-cont logo-container logo-container logo-container";
+    column-gap: 5px;
+    row-gap: 5px;
+
+ }
+
+
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:     
+    "menu-logo-line menu-logo-line menu-logo-line menu-logo-line"
+    "menu-benefit menu-specification menu-workout menu-contact";
+    column-gap: 5px;
+    row-gap: 5px;
+    
+}
+
+
+
